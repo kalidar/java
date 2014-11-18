@@ -13,25 +13,28 @@ public class ArrayInnlevering
         System.out.println("Oppgi arrayens lengde: ");
         int len = in.nextInt();
 
-        fyll(len);
+        int arrayFoo[] = fyll(len);
+        print(arrayFoo);
     }
 
     public static int[] fyll(int len)
     {
-        /*
-        Oprett et array 'a' med lengde 'val'.
-        For vær index i 'arr': tildel et tilfeldig nummer mellom 0 til 'val'.
-        */
-        int[] a = {};
-        return a;
+        int[] array = new int[len];
+
+        for (int i = 0; i < len; ++i)
+        {
+            array[i] = (int) (Math.random() * len + 1);
+        }
+        return array;
     }
 
-    public void print(int[] a)
+    public static void print(int[] arrayFoo)
     {
-        /*
-        For vær index i 'a', print innholdet.
-        System.out.printf
-         */
+        // TODO: Convert to printf!
+        for (int i = 0; i < arrayFoo.length; ++i)
+        {
+            System.out.print(arrayFoo[i] + ", ");
+        }
     }
 
     public void sjekk(int i)
